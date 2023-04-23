@@ -2,8 +2,12 @@ import "../index.css";
 import deletIcon from "../asserts/delete-icon.svg";
 import editIcon from "../asserts/edit-icon.svg";
 
-let Task = function ({taskList}) {
+let Task = function ({taskList,handleDeleteBtn}) {
 
+  let DeleteBtn = function() {
+    console.log(taskList.taskName);
+    handleDeleteBtn(taskList.taskName)
+  }
   return (
     <div className="bg-white rounded-md flex items-center justify-between h-14 px-4">
       <div className="flex items-center gap-2">
@@ -19,7 +23,7 @@ let Task = function ({taskList}) {
         </div>
       </div>
       <div className="flex">
-        <img src={deletIcon} alt="delet icon" className="cursor-pointer h-8" />
+        <img src={deletIcon} alt="delet icon" className="cursor-pointer h-8" onClick={DeleteBtn} />
         <img src={editIcon} alt="edit icon" className="h-8 cursor-pointer" />
       </div>
     </div>
