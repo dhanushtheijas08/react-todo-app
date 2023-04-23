@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function DropDown() {
+function PopUpDropDown() {
   const [selectedOption, setSelectedOption] = useState('All');
 
   const handleChange = (event) => {
@@ -9,7 +9,7 @@ function DropDown() {
 
   return (
     <div>
-      <select id="options" value={selectedOption} onChange={handleChange} className='w-fit bg-[#cccdde] text-2xl py-2 rounded-md focus:outline-none'>
+      <select id="options" value={selectedOption} onChange={handleChange} className= 'w-full bg-gray-300 text-2xl py-2 rounded-md text-heading font-semibold focus:outline-none'>
         <option value="all">All</option>
         <option value="Completed">Completed</option>
         <option value="Incomplete">Incomplete</option>
@@ -18,4 +18,4 @@ function DropDown() {
   );
 }
 
-export default DropDown;
+export default PopUpDropDown;

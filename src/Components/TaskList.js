@@ -1,6 +1,6 @@
 import Task from "./Task";
 
-let TaskList = function({taskList,handleDeleteBtn}) {
+let TaskList = function({taskList,handleDeleteBtn,handleEditBtn}) {
 
   let renderList = taskList.map((item,index) => <Task taskList={item} key={index} handleDeleteBtn={handleDeleteBtn}/>)
   return (

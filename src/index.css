@@ -46,3 +46,6 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   opacity: 1;
 }
+.cancel-icon:hover {
+  fill: white;
+}

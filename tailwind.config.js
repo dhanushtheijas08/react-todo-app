@@ -8,7 +8,7 @@ export const theme = {
   },
   extend: {
     colors: {
-      "primaryPurple": "#646ff0",
+      "primaryPurple": "#6366f1",
       "list-bg": "#fff",
       "list-box-bg": "#ecedf6",
       "filter-bg": "#cccdde",
