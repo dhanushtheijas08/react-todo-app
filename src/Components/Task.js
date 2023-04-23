@@ -19,8 +19,8 @@ let Task = function ({taskList}) {
         </div>
       </div>
       <div className="flex">
-        <img src={deletIcon} alt="delet icon" className="cursor-pointer h-9" />
-        <img src={editIcon} alt="edit icon" className="h-9 cursor-pointer " />
+        <img src={deletIcon} alt="delet icon" className="cursor-pointer h-8" />
+        <img src={editIcon} alt="edit icon" className="h-8 cursor-pointer" />
       </div>
     </div>
   );
