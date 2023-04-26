@@ -8,7 +8,7 @@ export const theme = {
   },
   extend: {
     colors: {
-      "whitePrime" : "#ccc",
+      "whitePrime" : "#fff",
       "btn-color"  : "#6366f1",
       "lightGray" : "#d1d5db",
       "darkGray" : "#64748b"

@@ -15,7 +15,7 @@ function DropDown({options}) {
         id="options"
         value={selectedOption}
         onChange={handleChange}
-        className="w-fit bg-[#cccdde] text-2xl py-2 rounded-md focus:outline-none"
+        className="w-fit bg-[#cccdde] text-2xl py-2 px-1 rounded-md focus:outline-none"
       >
         {allOptions}
       </select>
