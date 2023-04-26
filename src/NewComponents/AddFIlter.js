@@ -1,6 +1,6 @@
 import DropDown from "./DropDown";
 
-let AddFilter = function ({ handleAddbtn, handlePopUp }) {
+let AddFilter = function ({ handleAddbtn, handlePopUp,filterBy }) {
   return (
     <div className="flex justify-between items-center max-w-3xl mx-auto my-6">
       <button
@@ -11,7 +11,7 @@ let AddFilter = function ({ handleAddbtn, handlePopUp }) {
       >
         Add Task
       </button>
-      <DropDown />
+      <DropDown filterBy={filterBy} />
     </div>
   );
 };

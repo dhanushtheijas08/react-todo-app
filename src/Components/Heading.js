@@ -1,11 +1,5 @@
-
-
-let Heading = function() {
-  return (
-    <div>
-      <h1 className="font-semibold text-5xl font-sans mx-auto w-fit text-heading">TODO List</h1>
-    </div>
-  )
-}
+let Heading = function ({ title }) {
+  return <h1 className="text-darkGray text-5xl font-semibold max-w-fit mx-auto">{title}</h1>;
+};
 
 export default Heading;

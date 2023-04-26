@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-function DropDown({options}) {
-  const [selectedOption, setSelectedOption] = useState(options.at(0));
+function DropDown({ filterBy }) {
+  const [selectedOption, setSelectedOption] = useState("All");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
+    filterBy(event.target.value);
   };
-
-  let allOptions = options.map((opt) => <option value={opt}>{opt}</option>);
 
   return (
     <div>
@@ -17,7 +16,9 @@ function DropDown({options}) {
         onChange={handleChange}
         className="w-fit bg-[#cccdde] text-2xl py-2 rounded-md focus:outline-none"
       >
-        {allOptions}
+        <option value="all">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Incomplete">Incomplete</option>
       </select>
     </div>
   );
