@@ -27,6 +27,8 @@ let Task = function ({ taskList, handleDeleteBtn, handleEditBtn }) {
           className="w-10 h-7 bg-list-box-bg outline-none check-box"
           onClick={handleChecked}
         />
+
+        
         <div className="flex flex-col">
           {isChecked === true ? (
             <s className="text-sm line-through decoration-inherit decoration-1">
@@ -38,6 +40,8 @@ let Task = function ({ taskList, handleDeleteBtn, handleEditBtn }) {
           <p className="text-xs">{`${taskList.date} ${taskList.time}`}</p>
         </div>
       </div>
+
+
       <div className="flex">
         <img
           src={deletIcon}

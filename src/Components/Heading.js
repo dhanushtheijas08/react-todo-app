@@ -1,5 +1,6 @@
-let Heading = function ({ title }) {
-  return <h1 className="text-darkGray text-5xl font-semibold max-w-fit mx-auto">{title}</h1>;
+let Heading = function ({ title,size }) {
+  let style = `text-darkGray ${size} font-semibold max-w-fit mx-auto`;
+  return <h1 className={style}>{title}</h1>;
 };
 
 export default Heading;
