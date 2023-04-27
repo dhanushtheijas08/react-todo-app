@@ -8,16 +8,35 @@ let App = function () {
   let togglePopUp = () => setIsPopUp((prev) => !prev);
 
   let [tasks, setTasks] = useState([]);
-  let updateData = function (newData) {
+  let addNewData = function (newData) {
     setTasks((prev) => [newData, ...prev]);
+  };
+
+  let deleteData = function (taskId) {
+    setTasks((prev) => {
+      let newData = prev.filter((item) => item.taskId !== taskId);
+      return newData;
+    });
+  };
+
+  let editData = function (taskId, newTask) {
+    setTasks((prev) => {
+      let newData = prev.map((item) => {
+        if (item.taskId === taskId) {
+          item.taskName = newTask;
+        }
+        return item;
+      });
+      return newData;
+    });
   };
 
   return (
     <div className="p-6">
-      {isPopUp && <Popup togglePopUp={togglePopUp} updateData={updateData} />}
+      {isPopUp && <Popup togglePopUp={togglePopUp} addNewData={addNewData} />}
       <Heading title="TODO List" size="text-5xl" />
       <TaskControl togglePopUp={togglePopUp} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteData={deleteData} />
     </div>
   );
 };

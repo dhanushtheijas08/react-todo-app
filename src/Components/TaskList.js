@@ -1,7 +1,7 @@
 import Task from "./Task";
 
-let TaskList = function ({ tasks }) {
-  let renderTask = tasks.map((item,i) => <Task task={item} key={i} />);
+let TaskList = function ({ tasks,deleteData }) {
+  let renderTask = tasks.map((item,i) => <Task task={item} key={i} deleteData={deleteData}/>);
   let renderTaskLen = renderTask.length;
 
   return (

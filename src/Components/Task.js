@@ -1,8 +1,7 @@
 import deletIcon from "../asserts/delete-icon.svg";
 import editIcon from "../asserts/edit-icon.svg";
 
-let Task = function ({ task }) {
-
+let Task = function ({ task, deleteData }) {
   return (
     <div className="bg-whitePrime w-full rounded-md px-3 py-3 flex justify-between items-center">
       <div className="flex items-center gap-2">
@@ -21,7 +20,12 @@ let Task = function ({ task }) {
       </div>
 
       <div className="flex gap-2">
-        <img src={deletIcon} alt="delet icon" className="cursor-pointer h-8 " />
+        <img
+          src={deletIcon}
+          alt="delet icon"
+          className="cursor-pointer h-8 "
+          onClick={() => deleteData(task.taskId)}
+        />
         <img src={editIcon} alt="edit icon" className="h-8 cursor-pointer" />
       </div>
     </div>

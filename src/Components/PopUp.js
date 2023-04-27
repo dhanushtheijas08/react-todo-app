@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import Btn from "./Btn";
 import DropDown from "./DropDown";
 import { useState } from "react";
-let Popup = function ({ togglePopUp, updateData }) {
+let Popup = function ({ togglePopUp, addNewData }) {
   let options = ["Incomplete", "Completed"];
   let [inputData, setInputData] = useState("");
   let [tagVal, setTagVal] = useState(options.at(0));
@@ -20,7 +20,7 @@ let Popup = function ({ togglePopUp, updateData }) {
       ischecked: false,
       taskId: Math.floor(Math.random() * 100000),
     };
-    updateData(newSamp);
+    addNewData(newSamp);
   };
 
   let submitForm = function () {
