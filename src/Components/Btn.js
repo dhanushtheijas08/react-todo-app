@@ -7,6 +7,7 @@ let Btn = function ({ name, togglePopUp }) {
       {name}
     </button>
   );
+
 };
 
 export default Btn;
