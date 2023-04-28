@@ -1,5 +1,7 @@
 # React Todo List Web Application
 
+![React Todo List Web Application Screenshot](https://github.com/dhanushtheijas08/react-todo-app/blob/master/src/assets/Todo%20list%20Image.png)
+
 This is a simple todo list web application built using React and Tailwind CSS. You can use it to add new tasks, delete tasks, and edit existing tasks. [Live Preview](https://react-todo-list-dt.netlify.app/)
 
 ## Features
