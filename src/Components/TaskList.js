@@ -1,8 +1,21 @@
 import Task from "./Task";
 
-let TaskList = function ({ tasks, deleteData,togglePopUpdate,setNewTaskData }) {
+let TaskList = function ({
+  tasks,
+  deleteData,
+  togglePopUpdate,
+  setNewTaskData,
+  taskCompleted,
+}) {
   let renderTask = tasks.map((item, i) => (
-    <Task task={item} key={i} deleteData={deleteData} togglePopUpdate={togglePopUpdate} setNewTaskData={setNewTaskData}/>
+    <Task
+      task={item}
+      key={i}
+      deleteData={deleteData}
+      togglePopUpdate={togglePopUpdate}
+      setNewTaskData={setNewTaskData}
+      taskCompleted={taskCompleted}
+    />
   ));
   let renderTaskLen = renderTask.length;
 

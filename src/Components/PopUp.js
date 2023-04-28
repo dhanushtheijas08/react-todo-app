@@ -1,4 +1,4 @@
-import cancelIcon from "../asserts/cancel-icon.svg";
+import cancelIcon from "../assets/cancel-icon.svg";
 import Heading from "./Heading";
 import Btn from "./Btn";
 import DropDown from "./DropDown";

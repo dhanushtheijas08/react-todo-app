@@ -1,7 +1,7 @@
 import Btn from "./Btn";
 import DropDown from "./DropDown";
 import Heading from "./Heading";
-import cancelIcon from "../asserts/cancel-icon.svg";
+import cancelIcon from "../assets/cancel-icon.svg";
 import { useState } from "react";
 
 let PopUpdate = function ({ togglePopUpdate, newTaskData, editData }) {

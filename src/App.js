@@ -25,7 +25,6 @@ let App = function () {
   };
 
   let editData = function (newTaskDetials) {
-    console.log(newTaskDetials);
     setTasks((prev) => {
       let newData = prev.map((item) => {
         if (newTaskDetials.taskId === item.taskId) {
@@ -42,6 +41,29 @@ let App = function () {
     togglePopUpdate();
   };
 
+  let deleteAll = function() {
+    setTasks([])
+  }
+
+  let taskCompleted = function (taskId) {
+    setTasks((prev) => {
+      let newData = prev.map((item) => {
+        if (taskId === item.taskId) {
+          let newTag = item.tag === "Incomplete" ? "Completed" : "Incomplete";
+          let newIschecked = item.ischecked === true ? false : true;
+          return {
+            ...item,
+            tag: newTag,
+            ischecked: newIschecked,
+          };
+        }
+        return item;
+      });
+      console.log(newData);
+      return newData;
+    });
+  };
+
   return (
     <div className="p-6">
       {isPopUp && <Popup togglePopUp={togglePopUp} addNewData={addNewData} />}
@@ -53,12 +75,13 @@ let App = function () {
         />
       )}
       <Heading title="TODO List" size="text-5xl" />
-      <TaskControl togglePopUp={togglePopUp} />
+      <TaskControl togglePopUp={togglePopUp} deleteAll={deleteAll}/>
       <TaskList
         tasks={tasks}
         deleteData={deleteData}
         togglePopUpdate={togglePopUpdate}
         setNewTaskData={setNewTaskData}
+        taskCompleted={taskCompleted}
       />
     </div>
   );
