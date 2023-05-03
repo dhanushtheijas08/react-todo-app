@@ -6,7 +6,7 @@ import { useState } from "react";
 
 let PopUpdate = function ({ togglePopUpdate, newTaskData, editData }) {
   let options = ["Incomplete", "Completed"];
-  let [inputData, setInputData] = useState(newTaskData.taskName);
+  let [inputData, setInputData] =  useState(newTaskData.taskName);
   let [tagVal, setTagVal] = useState(newTaskData.tag);
 
   let onFormSubmit = function () {
