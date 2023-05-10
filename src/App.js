@@ -12,7 +12,7 @@ let App = function () {
 
   let [newTaskData, setNewTaskData] = useState({});
 
-  let [tasks, setTasks] = useState([]);
+  let [tasks, setTasks] =  useState([]);
   let addNewData = function (newData) {
     setTasks((prev) => [newData, ...prev]);
   };
