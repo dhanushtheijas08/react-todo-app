@@ -5,7 +5,7 @@ import TaskControl from "./Components/TaskControl";
 import TaskList from "./Components/TaskList";
 import { useState } from "react";
 let App = function () {
-  let [isPopUp, setIsPopUp] = useState(false);
+  let [isPopUp, setIsPopUp] = useState (false);
   let togglePopUp = () => setIsPopUp((prev) => !prev);
   let [isPopUpdate, setIsPopUpdate] = useState(false);
   let togglePopUpdate = () => setIsPopUpdate((prev) => !prev);
