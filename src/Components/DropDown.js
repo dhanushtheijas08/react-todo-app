@@ -5,7 +5,7 @@ function DropDown({ options, handleChangeOpt }) {
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
-    handleChangeOpt( event.target.value);
+    handleChangeOpt(event.target.value);
   };
 
   let allOptions = options.map((opt, i) => (
