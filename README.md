@@ -12,7 +12,7 @@ This is a simple todo list web application built using React and Tailwind CSS. Y
 
 ## Technologies
 
-This application was built using:
+This  application was built using:
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
